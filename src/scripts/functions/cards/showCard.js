@@ -3,6 +3,7 @@ import { showImg } from "./showImg";
 import { showBtn } from "./showBtn";
 import { showPrice } from "./showPrice";
 import { showDescription } from "./showDescription";
+import { uuid } from "uuidv4";
 
 // Function that displays the product card
 const showCard = (product) => {
@@ -12,9 +13,11 @@ const showCard = (product) => {
     let descBtn = document.createElement("div");
     // Add className
     imgTitle.classList.add(`imgTitle-${product.uuid}`);
+    imgTitle.id = uuid();
     descBtn.classList.add(`descBtn-${product.uuid}`);
     descBtn.classList.add("descBtnGrid");
     card.className = `card ${product.uuid}`;
+    card.id = `${product.id}`;
 
     let board = document.querySelector(".grid");
 
@@ -29,7 +32,6 @@ const showCard = (product) => {
     showPrice(product);
     showDescription(product);
     showBtn(product);
-  
 };
 
 export {showCard};

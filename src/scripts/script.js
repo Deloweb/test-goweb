@@ -7,9 +7,9 @@ class Product {
     this.price = price;
     this.description = description;
     this.uuid = uuid();
+    this.id = price;
   }
 }
-
 const product1 = new Product(
   "Vase en terre cuite",
   "images/vase.jpg",

@@ -10,12 +10,40 @@ board.classList.add("grid");
 document.body.appendChild(board);
 let i = 0;
 showOrder();
-let test = 0;
+
+let order;
+const showPriceInc = () => {
+  console.log('coucou');
+  order = "asc";
+  console.log(order);
+  
+};
+
+
+let increaseBtn = document.querySelector(".increase");
+increaseBtn.addEventListener("click", showPriceInc);
+
+const newProducts = [...productList];
+if (order === "asc") {
+  newProducts.sort((a, b) =>
+    a.price > b.price ? 1 : -1
+  );
+} else if (order === "desc") {
+  newProducts.sort((a, b) =>
+  a.price < b.price ? 1 : -1
+  );
+}
+
+console.log(newProducts);
+
 // For each product, dispay its card
-productList.forEach((product) => {
+newProducts.forEach((product) => {
   i++;
   showCard(product);
 });
+
+
+
 
 // Buttons
 const cardDisplay = document.querySelectorAll(".card");

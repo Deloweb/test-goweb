@@ -14,6 +14,11 @@ const showOrder = () => {
     orderContainer.appendChild(increase);
     orderContainer.appendChild(decrease);
     affichage.appendChild(orderContainer);
+
+
+
+
+    
   };
   
   export {showOrder};
