@@ -1,0 +1,37 @@
+.priceLine {
+  display: flex;
+  justify-content: center;
+}
+
+.priceGrid {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.priceHTGrid,
+.priceTTCGrid {
+  border: 1px solid grey;
+  padding: 5px;
+  margin: 15px 15px 0 0;
+  background-color: white;
+  font-size: 0.85rem;
+}
+
+.priceHTLine,
+.priceTTCLine {
+  border: 1px solid grey;
+  padding: 5px;
+  background-color: white;
+  font-size: 0.85rem;
+}
+.priceTTCLine {
+  margin-left: 15px;
+}
+
+@media (min-width: 576px) {
+    .priceLine {
+        padding-bottom: 20px;
+    }
+  }
+  

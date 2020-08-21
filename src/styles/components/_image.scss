@@ -1,0 +1,16 @@
+.imgStyle {
+    max-height: 75px;
+  }
+
+  @media (min-width: 576px) {
+    .imgStyle {
+      max-height: 150px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .imgStyle {
+      max-height: 210px;
+    }
+  }
+  

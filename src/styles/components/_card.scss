@@ -1,0 +1,49 @@
+@import "./image";
+@import "./title";
+@import "./desc";
+@import "./price";
+@import "./button";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid grey;
+  margin: 0px 10px 10px 10px;
+  width: 260px;
+  padding: 20px;
+  position: relative;
+}
+
+.cardList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid grey;
+  margin: 0px 10px 10px 10px;
+  width: 80%;
+  padding: 20px;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .descBtnLine {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .descBtnLine {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
