@@ -1,51 +1,49 @@
 "use strict";
 import "../styles/index.scss";
-import { productList } from "./script";
-import { showCard } from "./functions/cards/showCard";
-import { showOrder } from "./functions/buttons/showOrder";
+import { Board } from "./classes/Board";
+
+const board = new Board();
 
 // Create the board
-let board = document.createElement("div");
-board.classList.add("grid");
-document.body.appendChild(board);
 let i = 0;
-showOrder();
 
-let order;
-const showPriceInc = () => {
-  console.log('coucou');
-  order = "asc";
-  console.log(order);
-  
-};
+// let order;
+// const showPriceInc = () => {
+//   console.log('coucou');
+//   order = "asc";
+//   console.log(order);
+// };
 
+// let increaseBtn = document.querySelector(".increase");
+// increaseBtn.addEventListener("click", showPriceInc);
 
-let increaseBtn = document.querySelector(".increase");
-increaseBtn.addEventListener("click", showPriceInc);
+// let increaseBtn = document.querySelector(".increase");
+// increaseBtn.addEventListener("click", board.changeSorting());
 
-const newProducts = [...productList];
-if (order === "asc") {
-  newProducts.sort((a, b) =>
-    a.price > b.price ? 1 : -1
-  );
-} else if (order === "desc") {
-  newProducts.sort((a, b) =>
-  a.price < b.price ? 1 : -1
-  );
-}
+// let desc = document.querySelector(".decrease");
+// desc.addEventListener("click", board.changeSorting);
 
-console.log(newProducts);
+// const newProducts = [...productList];
+// if (order === "asc") {
+//   newProducts.sort((a, b) =>
+//     a.price > b.price ? 1 : -1
+//   );
+// } else if (order === "desc") {
+//   newProducts.sort((a, b) =>
+//   a.price < b.price ? 1 : -1
+//   );
+// }
+
+// console.log(newProducts);
 
 // For each product, dispay its card
-newProducts.forEach((product) => {
-  i++;
-  showCard(product);
-});
-
-
-
+// newProducts.forEach((product) => {
+//   i++;
+//   showCard(product);
+// });
 
 // Buttons
+const boardHTML = document.querySelector('.grid');
 const cardDisplay = document.querySelectorAll(".card");
 const prices = document.querySelectorAll(".priceGrid");
 const pricesHT = document.querySelectorAll(".priceHTGrid");
@@ -54,8 +52,8 @@ const descBtns = document.querySelectorAll(".descBtnGrid");
 
 // Line button
 let displayLine = () => {
-  board.classList.add("line");
-  board.classList.remove("grid");
+  boardHTML.classList.add("line");
+  boardHTML.classList.remove("grid");
 
   cardDisplay.forEach((card) => {
     card.classList.add("cardList");
@@ -88,8 +86,8 @@ line.addEventListener("click", displayLine);
 
 // Grid button
 let displayGrid = () => {
-  board.classList.add("grid");
-  board.classList.remove("line");
+  boardHTML.classList.add("grid");
+  boardHTML.classList.remove("line");
 
   cardDisplay.forEach((card) => {
     card.classList.remove("cardList");

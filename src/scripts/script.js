@@ -1,15 +1,5 @@
-import { uuid } from "uuidv4";
+import { Product } from "./classes/Product";
 
-class Product {
-  constructor(name, img, price, description) {
-    this.name = name;
-    this.img = img;
-    this.price = price;
-    this.description = description;
-    this.uuid = uuid();
-    this.id = price;
-  }
-}
 const product1 = new Product(
   "Vase en terre cuite",
   "images/vase.jpg",
@@ -71,7 +61,7 @@ const product10 = new Product(
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
 );
 
-let productList = [
+export const productList = [
   product1,
   product2,
   product3,
@@ -83,5 +73,3 @@ let productList = [
   product9,
   product10,
 ];
-
-export { productList };
