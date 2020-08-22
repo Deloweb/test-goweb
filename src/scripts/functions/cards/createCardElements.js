@@ -23,9 +23,9 @@ export const showPrice = (product) => {
   let priceHT = document.createElement("p");
   let priceTTC = document.createElement("p");
   // Add className
-  priceContainer.className = "priceGrid";
-  priceHT.className = "priceHTGrid";
-  priceTTC.className = "priceTTCGrid";
+  priceContainer.className = "priceGrid prices";
+  priceHT.className = "priceHTGrid pricesHT";
+  priceTTC.className = "priceTTCGrid pricesTTC";
   // Create text node
   let priceHTText = document.createTextNode(`${product.price} € HT `);
   let priceTTCText = document.createTextNode(

@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+svg {
+  pointer-events: none;
+}
+
 .gridBtn,
 .lineBtn {
   border: 1px solid grey;
@@ -22,6 +26,7 @@
   width: 50px;
   height: 50px;
   outline: none;
+  z-index: 12;
 }
 
 // Order by increasing or decreasing price
