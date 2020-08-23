@@ -1,37 +1,44 @@
-.priceLine {
+.price__line {
   display: flex;
   justify-content: center;
+
+  &--HT,
+  &--TTC {
+    border: 1px solid $color-grey;
+    padding: 5px;
+    background-color: white;
+    font-size: 0.85rem;
+  }
+
+  &--TTC {
+    margin-left: 15px;
+  }
 }
 
-.priceGrid {
+.price__grid {
   position: absolute;
   top: 0;
   right: 0;
+
+  &--HT,
+  &--TTC {
+    border: 1px solid $color-grey;
+    padding: 5px;
+    margin: 15px 15px 0 0;
+    background-color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
 }
 
-.priceHTGrid,
-.priceTTCGrid {
-  border: 1px solid grey;
-  padding: 5px;
-  margin: 15px 15px 0 0;
-  background-color: white;
-  font-size: 0.85rem;
-}
-
-.priceHTLine,
-.priceTTCLine {
-  border: 1px solid grey;
-  padding: 5px;
-  background-color: white;
-  font-size: 0.85rem;
-}
-.priceTTCLine {
-  margin-left: 15px;
+.sup {
+  vertical-align: super;
+  font-weight: bold;
+  font-size: 80%;
 }
 
 @media (min-width: 576px) {
-    .priceLine {
-        padding-bottom: 20px;
-    }
+  .priceLine {
+    padding-bottom: 20px;
   }
-  
+}

@@ -1,31 +1,94 @@
+@import "../utilities/variables.scss";
+
 header {
   width: 100%;
-  border-bottom: 1px solid grey;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   .header {
     width: 75%;
     padding: 15px;
     display: flex;
     align-items: center;
-  }
-  .logo {
-    color: grey;
-    font-size: 2.5rem;
-    font-weight: bolder;
-    font-style: italic;
-    font-family: "Telex", sans-serif;
-    padding-right: 15px;
+
+    &__logo {
+      color: $color-dark;
+      font-size: 2.5rem;
+      font-weight: bolder;
+      font-style: italic;
+      font-family: "Telex", sans-serif;
+      padding-right: 15px;
+
+      &--dot {
+        color: $color-red;
+      }
+    }
+
+    &__mainTitle {
+      padding-left: 15px;
+      border-left: 1px solid $color-grey;
+      font-size: 1.3rem;
+    }
   }
 
-  .dot {
-    color: red;
+  // Display in grid or in line
+  .display {
+    width: 75%;
+    padding: 15px 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid $color-grey;
+
+    &__btns {
+      display: flex;
+      align-items: center;
+
+      .gridBtn,
+      .lineBtn {
+        border: 1px solid $color-grey;
+        border-radius: 50%;
+        background-color: white;
+        padding: 10px;
+        margin: 10px 20px;
+        width: 50px;
+        height: 50px;
+        outline: none;
+        z-index: 12;
+
+        svg {
+          pointer-events: none;
+        }
+      }
+
+      .disabled {
+        background-color: $color-grey;
+      }
+    }
+
+    // Sorting by increasing or decreasing price
+    #increase,
+    #decrease {
+      border: none;
+      background-color: white;
+      outline: none;
+    }
+
+    #increase {
+      padding-right: 10px;
+      border-right: 1px solid $color-grey;
+    }
+
+    #decrease {
+      padding-left: 10px;
+    }
   }
 
-  .mainTitle {
-    padding-left: 15px;
-    border-left: 1px solid grey;
-    font-size: 1.3rem;
+  @media (min-width: 576px) {
+    .display {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }

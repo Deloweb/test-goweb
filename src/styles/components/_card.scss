@@ -9,8 +9,8 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border: 1px solid grey;
-  margin: 10px;
+  border: 1px solid $color-grey;
+  margin: 0px 10px 20px 10px;
   width: 260px;
   padding: 20px;
   position: relative;
@@ -21,29 +21,29 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid grey;
-  margin: 0px 10px 10px 10px;
+  border: 1px solid $color-grey;
+  margin: 0px 10px 20px 10px;
   width: 80%;
   padding: 20px;
   position: relative;
 }
 
 @media (min-width: 576px) {
-  .descBtnLine {
+  .descBtn--line {
     height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
 }
 
 @media (min-width: 992px) {
-  .descBtnLine {
+  .descBtn--line {
     height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
 }

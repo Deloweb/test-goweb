@@ -61,6 +61,7 @@ const product10 = new Product(
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
 );
 
+// Create a list with all products
 export const productList = [
   product1,
   product2,
