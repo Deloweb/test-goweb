@@ -28,6 +28,14 @@
   position: relative;
 }
 
+.descBtn--line {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @media (min-width: 576px) {
   .descBtn--line {
     height: 250px;

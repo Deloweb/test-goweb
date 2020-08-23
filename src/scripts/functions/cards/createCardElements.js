@@ -48,7 +48,7 @@ export const createPrice = (product, board) => {
   let priceHTText = document.createTextNode(`${product.price}`);
   let HTText = document.createTextNode(" € HT");
   let priceTTCText = document.createTextNode(
-    `${product.price + (product.price * 20) / 100}`
+    `${(product.price + (product.price * 20) / 100).toFixed(2)}`
   );
   let TTCText = document.createTextNode(" € TTC");
   // Call specific container

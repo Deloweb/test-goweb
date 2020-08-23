@@ -7,4 +7,12 @@
   border-radius: 50px;
   outline: none;
   width: 80%;
+  margin: 10px;
+}
+
+@media (min-width: 576px) {
+  .btn {
+    margin: 0;
+    margin-bottom: 20px;
+  }
 }
