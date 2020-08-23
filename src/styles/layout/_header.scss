@@ -31,15 +31,18 @@ header {
       font-size: 1.3rem;
     }
   }
-
+  hr {
+    width: 100%;
+    border-top: 1px solid $color-grey;
+    overflow: visible;
+    text-align: center;
+  }
   // Display in grid or in line
   .display {
     width: 75%;
-    padding: 15px 100%;
-    align-items: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    border-top: 1px solid $color-grey;
 
     &__btns {
       display: flex;
